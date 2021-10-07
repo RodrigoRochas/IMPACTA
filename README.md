@@ -1,4 +1,4 @@
-# |**IMPACTA**|
+<center><h1>FACULDADE IMPACTA</h1></center>
  Repositório destinado a faculdade
 
 
