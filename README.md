@@ -1,4 +1,4 @@
-# | **IMPACTA** |
+# |**IMPACTA**|
  Repositório destinado a faculdade
 
 
