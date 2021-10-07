@@ -1,4 +1,5 @@
-<center><h1>FACULDADE IMPACTA</h1></center>
+<h1 align=center><b><i>FACULDADE IMPACTA</i></b></h1>
+
  Repositório destinado a faculdade
 
 
