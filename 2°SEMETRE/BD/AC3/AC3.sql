@@ -1,3 +1,4 @@
+create database AC3;
 use AC3;
 GO
 create table TBLfornecedor (
@@ -26,6 +27,10 @@ CREATE TABLE TBLproduto(
     CONSTRAINT FK_PRODUTO_FORNECEDOR FOREIGN KEY(Id_Fornecedor) REFERENCES TBLfornecedor(Id_Fornecedor)
 
 );
+
+
+
+
 GO
 CREATE TABLE TBLItemCompra (
     Id_Produto INT NOT NULL,
@@ -40,7 +45,66 @@ CREATE TABLE TBLItemCompra (
 
 );
 GO
-SELECT * FROM TBLcompra;
+INSERT INTO TBLfornecedor (nome) VALUES ('Dist.PPG');
+GO
+INSERT INTO TBLproduto (nome, Id_Fornecedor)
+	VALUES ('Skol', (SELECT Id_Fornecedor FROM TBLfornecedor WHERE nome like '%Ambev%' ));
+
+GO
+
+INSERT INTO TBLproduto (nome, Id_Fornecedor) 
+	VALUES ('Fralda Pampers', (SELECT Id_Fornecedor FROM TBLfornecedor WHERE nome like '%P&G%'));
+
+GO
+
+INSERT INTO TBLproduto (nome, Id_Fornecedor) 
+	VALUES ('Fralda Pampers', (SELECT Id_Fornecedor FROM TBLfornecedor WHERE nome like '%Dist%'));
+
+GO
+
+INSERT INTO TBLcompra (Nota_Fiscal, DiasEntrega, Valor, Dataa) 
+	VALUES ('#112434', 3, 8243, '20171021');
+
+GO
+
+INSERT INTO TBLcompra (Nota_Fiscal, DiasEntrega, Valor, Dataa)
+	VALUES ('#324235', 10, 1230, '20171021');
+
+GO
+
+INSERT INTO TBLcompra (Nota_Fiscal, DiasEntrega, Valor, Dataa)
+	VALUES ('#455464', 2, 500, '20171026');
+
+GO
+
+INSERT INTO TBLItemCompra (Id_Produto, Id_Fornecedor, Nota_Fiscal, QTDE) 
+	VALUES (
+	(SELECT Id_Produto FROM TBLproduto WHERE nome like '%Skol%'),
+	(SELECT Id_Fornecedor FROM TBLfornecedor WHERE nome like '%AMBEV%'),
+	'#112434',
+	300
+);
+
+GO
+
+INSERT INTO TBLItemCompra (Id_Produto, Id_Fornecedor, Nota_Fiscal, QTDE) 
+	VALUES (
+	(SELECT Id_Produto FROM TBLproduto WHERE nome = 'Fralda Pampers'),
+	(SELECT Id_Fornecedor FROM TBLfornecedor WHERE nome ='P&G'),
+	'#324235',
+	25
+);
+
+
+
+
+
+
+
+
+
+
 SELECT * FROM TBLfornecedor;
 SELECT * FROM TBLproduto;
+SELECT * FROM TBLcompra; 
 SELECT * FROM TBLItemCompra;
