@@ -1,11 +1,83 @@
 from flask import Flask
 from flask import render_template
+from pessoa import Pessoa
 
-app = Flask(__name__)
+app = Flask (
+    __name__, 
+    template_folder = "meu_modelo",
+    static_folder = "static",   
+)
 
 @app.route('/')
 def index():
-    return render_template('index.html')
+    resposta = render_template('index.html')
+    return resposta
+
+@app.route('/alunos')
+def aluno():
+    # teste = Pessoa('RRS', 14122, 'ADS', 10)
+    # pessoa = {'nome' : 'Rodrigo', 'matricula': 123456, 'curso' : 'ADS-2021'}
+    nome_aluno = "Rodrigo"
+    matricula_aluno = 123
+    curso_aluno = "ADS"
+    nota_curso = 2  
+    
+    return render_template (
+        'aluno.html', 
+        # objeto = teste
+        # dados = pessoa
+        nome = nome_aluno,
+        matricula = matricula_aluno,
+        curso = curso_aluno,
+        nota = nota_curso
+        
+    )
+    
+    
+    
+@app.errorhandler(404)
+def error404(e):
+    return render_template('erro.html'), 404
+    
+
+
+app.run(debug=True)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# from flask import Flask
+# from flask import render_template
+
+# app = Flask(__name__)
+
+# @app.route('/')
+# def index():
+#     return render_template('index.html')
 
 # @app.route('/')
 # def ola():
@@ -55,4 +127,4 @@ def index():
 #     return msg2
     
 
-app.run(debug=True, port=5000)
+# app.run(debug=True, port=5000)
