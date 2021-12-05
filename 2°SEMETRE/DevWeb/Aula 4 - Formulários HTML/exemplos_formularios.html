@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Exemplos de formulários</title>
+	<meta charset="UTF-8">
+</head>
+<body>
+	<form method="POST">
+		<label for="tx-usuario">Usuário:</label><br>
+		<input type="text" name="usuario" id="tx-usuario"><br>
+
+		<label for="tx-senha">Senha:</label><br>
+		<input type="password" name="senha" id="tx-senha"><br>
+
+		<label for="ta-mensagem">Mensagem:</label><br>
+		<textarea name="mensagem" id="ta-mensagem" rows="10" cols="30"></textarea><br>
+
+		<label for="cs-disciplinas">Selecione uma disciplina:</label><br>
+		<select name="disciplinas" id="cs-disciplinas">
+			<option>Desenvolvimento Web</option>
+			<option selected>Programação Orientada a Objetos</option>
+			<option>Banco de Dados</option>
+		</select><br>
+
+		<label for="cs-estados">Selecione um estado:</label><br>
+		<select name="estado" id="cs-estados">
+			<option value="AL">Alagoas</option>
+			<option value="RJ">Rio de Janeiro</option>
+			<option value="SC">Santa Caratina</option>
+			<option value="SP" selected>São Paulo</option>
+			<option value="TO">Tocantins</option>
+		</select><br>
+
+		Selecione os melhores horários para o curso: <br>
+		<input type="checkbox" name="turno" id="cb-manha" value="M">
+		<label for="cb-manha">Manhã</label> <br>
+		
+		<input type="checkbox" name="turno" id="cb-tarde" value="T" checked>
+		<label for="cb-tarde">Tarde</label> <br>
+		
+		<input type="checkbox" name="turno" id="cb-noite" value="N" checked>
+		<label for="cb-noite">Noite</label> <br>
+		
+		Qual a melhor forma de contato?<br>
+		<input type="radio" name="formas-contato" id="ra-whatsapp" value="zap">
+		<label for="ra-whatsapp">Whatsapp</label> <br>
+
+		<input type="radio" name="formas-contato" id="ra-instagram" value="instagram">
+		<label for="ra-instagram">Instagram</label> <br>
+
+		<input type="radio" name="formas-contato" id="ra-telefone" value="telefone" checked>
+		<label for="ra-telefone">Telefone</label> <br>
+
+		<input type="radio" name="formas-contato" id="ra-email" value="email">
+		<label for="ra-email">E-mail</label> <br>
+
+		Qual o melhor semestre para iniciar o curso?<br>
+		<input type="radio"	name="semestre" id="ra-primeiro" value="1" checked>
+		<label for="ra-primeiro">Primeiro</label> <br>
+		
+		<input type="radio"	name="semestre" id="ra-segundo" value="2">
+		<label for="ra-segundo">Segundo</label> <br>
+		<br>
+
+		<input type="button" value="Botão do tipo button">
+		<input type="submit" value="Enviar">
+		<input type="reset" value="Limpar">
+	</form>
+
+</body>
+</html>
