@@ -1,0 +1,13 @@
+1. Instalar servidor WEB (Apache)
+https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_Tutorials.WebServerDB.CreateWebServer.html
+
+sudo yum update -y
+sudo amazon-linux-extras install -y lamp-mariadb10.2-php7.2 php7.2
+cat /etc/system-release
+sudo yum install -y httpd
+sudo systemctl start httpd
+
+2. Liberar a porta HTTP do servidor
+
+3. Construir a página e colocar em /var/www/html/index.html
+

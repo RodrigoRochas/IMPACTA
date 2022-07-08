@@ -1,0 +1,13 @@
+ls - lista arquivos no diretório atual
+pwd - diretório atual
+touch - cria arquivo vazio
+nano - editor de texto
+cp - copia arquivo
+cat - exibe conteúdo de arquivo
+>> - usado para redirecionamento de impressão
+rm - remove um arquivo
+mv - mover e renomear arquivos
+mkdir - cria diretório
+rmdir - cria diretório
+cd - muda de diretório
+cd .. - vai ao diretório acima

@@ -1,0 +1,28 @@
+Criem uma sala no meetup para seu grupo e me chamem quando conveniente:
+  . Para mostrar resultado.
+  . Para tirar dúvidas.
+
+Hoje vamos desenvolver a AC4.
+Nesta atividade será desenvolvido (LEMBRETE):
+1.   Atualização do FrontEnd para autenticação:
+     . Cadastro de userid/senha
+     . Autenticação de userid/senha
+2. Backend de cadastro de userid/senha:
+     . Método POST.
+     . Lambda para inserir dados no DynamoDB.
+3. Backend de autenticação de userid/senha:
+     . Método GET.
+     . Lambda para consultar dados no DynamoDB.
+     . Retorna userid ou "" (falha na autenticação)
+     . Colocar o userid retornado em um cookie.
+4. API Gateway
+     . Integrar um lambda para cada método (GET, POST, ...) para cada tabela
+     . Usar o API GW para passar os parâmetros do cabeçalho para o corpo no GET
+     . Para Browser LEMBRE: Configure CORS.
+     . Ao final LEMBRE de implantar o estágio.
+
+Entrega:
+a. Documentos com páginas para web (html ou semelhantes)
+b. Código fonte das funções (Lambdas - No Github ou entregar no Classroom)
+c. GITHub atualizado
+Hoje não há exercício para presença.
